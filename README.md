@@ -1,8 +1,6 @@
 # MyReads Project
 
-This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
-
-Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
+This project is part of Udacity's assessment project for React Fundamentals course. It represents a kind of virtual book shelf. The user can search for books and add them to his/her shelves. The shelves are divided into three categories as 'Want to Read', 'Currently Reading' and 'Read'. The user can move the books between these shelves or even choose to remove it from the shelves.
 
 ## TL;DR
 
@@ -22,9 +20,15 @@ To get started developing right away:
 │   └── index.html # DO NOT MODIFY
 └── src
     ├── App.css # Styles for your app. Feel free to customize this as you desire.
-    ├── App.js # This is the root of your app. Contains static HTML right now.
+    ├── App.js # This is the root of your app.
     ├── App.test.js # Used for testing. Provided with Create React App. Testing is encouraged, but not required.
     ├── BooksAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
+    ├── MainPage.js # This is the home page of your app. It displays the contents of your shelf and a link to the Search page.
+    ├── SearchPage.js # This page lets you search for books to add to your shelf and also a link to return back to Home page.
+    ├── Shelf.js # This represents a single shelf and displays the books available in that shelf.
+    ├── BooksList.js # This just represents the books on a shelf. It loops through the available books to display each of them.
+    ├── BookTile.js # This represents a single book on our shelf. Each book has an associated control to change it shelf.
+    ├── SelectionDropDown.js # This represents the control available with each book to change their shelves.
     ├── icons # Helpful images for your app. Use at your discretion.
     │   ├── add.svg
     │   ├── arrow-back.svg
@@ -33,11 +37,9 @@ To get started developing right away:
     └── index.js # You should not need to modify this file. It is used for DOM rendering only.
 ```
 
-Remember that good React design practice is to create new JS files for each component and use import/require statements to include them where they are needed.
-
 ## Backend Server
 
-To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
+To simplify the development process, a backend server is provided by Udacity. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods needed to perform necessary operations on the backend:
 
 * [`getAll`](#getall)
 * [`update`](#update)
@@ -81,12 +83,8 @@ search(query)
 ## Important
 The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
 
-## Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
-
 ## Contributing
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+This repository is the project code for submission as part of Udacity's React Fundamentals course. Therefore, currently no pull requests will be accepted.
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
